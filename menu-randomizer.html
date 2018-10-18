@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu randomizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<p>Apretá una tecla para obtener una receta random</p>
+	<script type="text/javascript">
+      function randomize (){
+		var myArray = [
+		  "Milanesas de zuchini",
+		  "Risotto",
+		  "Pastel de papa",
+		  "Hamburguesas de lentejas",
+		  "Lasagna de verdura",
+		  "Pizza",
+		  "Tarta de espinaca",
+		  "Tarta de choclo",
+          "Empanadas"
+		];
+	    var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
+		document.body.innerHTML = randomItem;
+      }
+    window.addEventListener("keydown", randomize);      
+	</script>
+
+</body>
+</html>
