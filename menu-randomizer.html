@@ -7,6 +7,7 @@
 </head>
 <body>
 	<p>Apretá una tecla para obtener una receta random</p>
+	<p id="receta">Tu receta va a aparecer aca</p>
 	<script type="text/javascript">
       function randomize (){
 		var myArray = [
@@ -21,7 +22,7 @@
           "Empanadas"
 		];
 	    var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
-		document.body.innerHTML = randomItem;
+		document.getElementById("receta").innerHTML = randomItem;
       }
     window.addEventListener("keydown", randomize);      
 	</script>
